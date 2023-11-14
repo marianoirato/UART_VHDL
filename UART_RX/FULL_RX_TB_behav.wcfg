@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="FULL_RX_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="FULL_RX_TB" />
+            <top_module name="txt_util" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,494.000001 us"></ZoomEndTime>
+      <Cursor1Time time="744.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="190"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/FULL_RX_TB/tb_clk" type="logic">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/rx_tb" type="logic">
+      <obj_property name="ElementShortName">rx_tb</obj_property>
+      <obj_property name="ObjectShortName">rx_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/enable_lectura_READER" type="logic">
+      <obj_property name="ElementShortName">enable_lectura_READER</obj_property>
+      <obj_property name="ObjectShortName">enable_lectura_READER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/arrRx" type="array">
+      <obj_property name="ElementShortName">arrRx[9:0]</obj_property>
+      <obj_property name="ObjectShortName">arrRx[9:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/data_out_from_fifo_to_tx" type="array">
+      <obj_property name="ElementShortName">data_out_from_fifo_to_tx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_from_fifo_to_tx[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/baud_rate_hz" type="other">
+      <obj_property name="ElementShortName">baud_rate_hz</obj_property>
+      <obj_property name="ObjectShortName">baud_rate_hz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/BAUD_RATE" type="other">
+      <obj_property name="ElementShortName">BAUD_RATE</obj_property>
+      <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/uut/UART_RX_Inst/in_RX_Serial" type="logic">
+      <obj_property name="ElementShortName">in_RX_Serial</obj_property>
+      <obj_property name="ObjectShortName">in_RX_Serial</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/uut/UART_RX_Inst/out_RX_Byte" type="array">
+      <obj_property name="ElementShortName">out_RX_Byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_RX_Byte[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/uut/UART_RX_Inst/r_SM_Main" type="other">
+      <obj_property name="ElementShortName">r_SM_Main</obj_property>
+      <obj_property name="ObjectShortName">r_SM_Main</obj_property>
+   </wvobject>
+   <wvobject fp_name="/FULL_RX_TB/uut/register_rx_full" type="logic">
+      <obj_property name="ElementShortName">register_rx_full</obj_property>
+      <obj_property name="ObjectShortName">register_rx_full</obj_property>
+   </wvobject>
+</wave_config>

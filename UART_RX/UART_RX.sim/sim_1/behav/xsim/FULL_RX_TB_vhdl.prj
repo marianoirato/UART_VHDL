@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../UART_RX.srcs/sources_1/new/FIFO.vhd" \
+"../../../../UART_RX.srcs/sources_1/new/RX.vhd" \
+"../../../../UART_RX.srcs/sources_1/new/Top_Module.vhd" \
+"../../../../UART_RX.srcs/sources_1/new/file.vhd" \
+"../../../../UART_RX.srcs/sim_1/new/FULL_RX_TB.vhd" \
+
+# Do not sort compile order
+nosort
