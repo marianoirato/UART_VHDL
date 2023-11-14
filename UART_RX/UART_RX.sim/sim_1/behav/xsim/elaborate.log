@@ -17,6 +17,6 @@ Compiling package ieee.std_logic_unsigned
 Compiling architecture rtl of entity xil_defaultlib.UART_RX [uart_rx_default]
 Compiling architecture behavioral of entity xil_defaultlib.FIFO [fifo_default]
 Compiling architecture behavioral of entity xil_defaultlib.top_module [top_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.FileREADER [\FileREADER(1,48)\]
+Compiling architecture behavioral of entity xil_defaultlib.data_file [\data_file(1,45)\]
 Compiling architecture behavior of entity xil_defaultlib.full_rx_tb
 Built simulation snapshot FULL_RX_TB_behav

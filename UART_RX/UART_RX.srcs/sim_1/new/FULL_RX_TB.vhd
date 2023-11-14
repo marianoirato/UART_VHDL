@@ -22,8 +22,8 @@ architecture behavior of FULL_RX_TB is
     end component;
 
     --agrega el reader
-    component FileREADER
-    generic( read_file      : string	   := "C:/Users/Martin/Downloads/Archivo_de_Lectura.dat";
+    component data_file
+    generic( file_name      : string	   := "C:/Users/Martin/VHDL/UART_RX/archivo_uart.dat";
              output_width   : integer      := 10);
     port( read_new_data      : in  std_logic;          
           file_on           : out std_logic;
@@ -66,8 +66,8 @@ begin
     );
 
     --Instanciacion del reader
-    Inst_FileREADER: FileREADER 
-    generic map(read_file       => "C:/Users/Martin/Downloads/Archivo_de_Lectura.dat",	
+    Inst_FileREADER: data_file 
+    generic map(file_name       => "C:/Users/Martin/VHDL/UART_RX/archivo_uart.dat",	
                 output_width    => 10)      
     port map(
         read_new_data	=> enable_lectura_READER,
