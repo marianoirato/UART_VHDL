@@ -1,0 +1,236 @@
+
+*** Running vivado
+    with args -log top_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+Command: synth_design -top top_module -part xc7s50ftgb196-1Q
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28409
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2423.719 ; gain = 0.000 ; free physical = 5694 ; free virtual = 13844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_module' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/Top_Module.vhd:38]
+	Parameter clk_freq bound to: 72000000 - type: integer 
+	Parameter baud_rate bound to: 9600 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter FILE_NAME bound to: /home/luciano/Desktop/FILE.dat - type: string 
+	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'FILE_READER' declared at '/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/FILE_READER.vhd:24' bound to instance 'FILE_READER_inst' of component 'FILE_READER' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/Top_Module.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'FILE_READER' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/FILE_READER.vhd:38]
+	Parameter FILE_NAME bound to: /home/luciano/Desktop/FILE.dat - type: string 
+	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FILE_READER' (1#1) [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/FILE_READER.vhd:38]
+	Parameter CLK_PER_BIT bound to: 7500 - type: integer 
+INFO: [Synth 8-3491] module 'UART_TX' declared at '/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/UART_TX.vhd:24' bound to instance 'UART_TX_inst' of component 'UART_TX' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/Top_Module.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'UART_TX' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/UART_TX.vhd:39]
+	Parameter CLK_PER_BIT bound to: 7500 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UART_TX' (2#1) [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/UART_TX.vhd:39]
+	Parameter FIFO_DEPTH bound to: 1024 - type: integer 
+	Parameter BITS_PER_BYTE bound to: 8 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'UART_FIFO_inst' of component 'UART_FIFO' [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/Top_Module.vhd:121]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (3#1) [/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.srcs/sources_1/new/Top_Module.vhd:38]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2423.719 ; gain = 0.000 ; free physical = 6458 ; free virtual = 14611
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2423.719 ; gain = 0.000 ; free physical = 6465 ; free virtual = 14618
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50ftgb196-1Q
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s50ftgb196-1Q
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6465 ; free virtual = 14618
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_FILE_READER_reg' in module 'FILE_READER'
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              001 |                               00
+                  s_load |                              010 |                               01
+                 s_clear |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_FILE_READER_reg' using encoding 'one-hot' in module 'FILE_READER'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              000 |                              000
+             s_start_bit |                              001 |                              001
+             s_data_send |                              010 |                              010
+              s_stop_bit |                              011 |                              011
+                 s_clean |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6422 ; free virtual = 14580
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 6     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6204 ; free virtual = 14386
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6201 ; free virtual = 14384
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4649] Removing BlackBox instance UART_FIFO_inst of module UART_FIFO_bbox_0 having unconnected or no output ports
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     2|
+|4     |LUT2   |    33|
+|5     |LUT3   |     5|
+|6     |LUT4   |     7|
+|7     |LUT5   |     5|
+|8     |LUT6   |    11|
+|9     |FDRE   |    57|
+|10    |IBUF   |     1|
+|11    |OBUF   |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+------------+------+
+|      |Instance           |Module      |Cells |
++------+-------------------+------------+------+
+|1     |top                |            |   147|
+|2     |  FILE_READER_inst |FILE_READER |    81|
+|3     |  UART_TX_inst     |UART_TX     |    55|
++------+-------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6186 ; free virtual = 14370
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.746 ; gain = 6.027 ; free physical = 6203 ; free virtual = 14387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 2429.754 ; gain = 6.027 ; free physical = 6203 ; free virtual = 14387
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2429.754 ; gain = 0.000 ; free physical = 6289 ; free virtual = 14473
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2453.758 ; gain = 0.000 ; free physical = 6214 ; free virtual = 14409
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 2453.758 ; gain = 30.039 ; free physical = 6350 ; free virtual = 14546
+INFO: [Common 17-1381] The checkpoint '/home/luciano/Documents/Vivado/TD3/UART_VHDL/UART_TX/UART_TX.runs/synth_1/top_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 16:50:37 2023...
